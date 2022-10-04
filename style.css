@@ -12,14 +12,17 @@
 .buttonContainer{
     background-color: #553c9a;
     width: 100%;
+
 }
 
 .buttons{
     cursor: pointer;
     justify-content: center;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+
 }
-.card{
+.userCards{
     grid-gap: 1rem;
     white-space: pre-wrap;
     text-align: center;
@@ -27,11 +30,16 @@
     flex-wrap: wrap;
     background: #515DA2;
     opacity: .8;
+    font-family: 'Roboto', sans-serif;
   }
 
-.cardContainerStyle{
+#listContainer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     grid-gap: 1rem;
 };
+
+.backgroundCss{
+    background: rgb(199, 29, 29);
+}

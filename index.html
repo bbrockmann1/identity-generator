@@ -5,20 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identity Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script defer src="index.js" ></script>
 </head>
 <body>
     <div id="headerDiv">
-        <header>
+        <header class="headerStyle">
             <h1>Welcome to Identity Generator!</h1>
             <h2>Don't give companies your information</h2>
             <h2>create a new Identity below</h2>
         </header>
     </div>
-    <div id="createNewUser">
-        <button class="submitButton" id="submitButton">Create 5 New Identities</button>
+    <div id="buttonContainer">
+        <button class="buttons" id="submitButton">Create 4 New Identities</button>
+        <form id="submitSeed">
+            <input type="text" placeholder="Enter Seed" name="seed" id="seedInput">
+            <button class="buttons">Submit</button>
+        </form>
+        <button class="buttons" id="clearUsers">Clear all Users</button>
     </div>
     <div id="listContainer"></div>
-    <button id="clearUsers">Clear all Users</button>
 </body>
 </html>
