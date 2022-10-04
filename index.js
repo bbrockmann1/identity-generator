@@ -103,13 +103,35 @@ function newFunction(card){
             editButton.id = "editButton";
             editButton.textContent = "Edit";
             piece.appendChild(editButton);
-            editButton.onclick = e => editFormCreation(e);
+            editButton.onclick = e => {
+                let changesMade = document.createElement('form');
+                changesMade.id = 'changes';
+                let edits = document.createElement('input');
+                edits.type = 'text';
+                edits.id = 'myEdits';
+                edits.placeholder = `${e.target.parentNode.textContent}`;
             
-        }) 
+                let saveButton = document.createElement('input');
+                saveButton.value = 'Save Changes';
+                saveButton.type = 'submit';
+                saveButton.className = 'buttons'; 
+            
+                changesMade.append(edits, saveButton);
+                e.target.parentNode.append(changesMade);
+            
+                changesMade.addEventListener('submit', event => {
+                  event.preventDefault()
+                  e.target.parentNode.textContent = `${event.target.myEdits.value}`;
+                  event.target.remove();
+                }
+        )}
     })
+})
+    
     card.querySelectorAll("h3").forEach( piece => {
         piece.addEventListener("mouseleave", e => {
             document.querySelector('#editButton').remove();
+            document.querySelector('#changes').remove();
         })
     })
 }
