@@ -86,7 +86,7 @@ function createUserCard(data){
 
     userCard.append(createRemoveButton, createImg, createName, createAddress, createEmail, createUsername, createDOB, createNumber, seedBtn);
     newFunction(userCard);
-    cardDiv.append(userCard);
+    cardDiv.prepend(userCard);
     
     seedBtn.addEventListener('click', (e) => {
         seedBtn.remove();
