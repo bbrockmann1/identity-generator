@@ -23,8 +23,8 @@ fetchRandomUser(api);
 document.querySelector('#clearUsers').onclick = () => {
     document.querySelectorAll(".userCards").forEach(card => {
         const seedInput = document.getElementById('submitSeed');
-        seedInput.reset();
         card.remove();
+        seedInput.reset();
     })
 }
 
@@ -60,6 +60,7 @@ function createUserCard(data){
     createRemoveButton.className = 'removeButton';
 
     createImg.src = data.results[0].picture.large;
+    createImg.className = 'images';
     createName.textContent = `${data.results[0].name.title} ${data.results[0].name.first} ${data.results[0].name.last}`;
     createEmail.textContent = `Email:\n${data.results[0].email}`;
     createUsername.textContent = `Username:\n${data.results[0].login.username}`;
@@ -135,32 +136,3 @@ function newFunction(card){
         })
     })
 }
-
-
-
-function editFormCreation(event) {
-    let changesMade = document.createElement('form');
-
-    let edits = document.createElement('input');
-    edits.type = 'text';
-    edits.id = 'myEdits';
-    edits.placeholder = 'Edit Info';
-
-    let saveButton = document.createElement('input');
-    saveButton.value = 'Save Changes';
-    saveButton.type = 'submit'; 
-
-    changesMade.append(edits, saveButton);
-    event.target.appendChild(changesMade);
-
-    changesMade.addEventListener('submit', e => {
-      e.preventDefault();
-      event.target.parentNode.textContent = `${e.target.myEdits.value}`;
-      e.target.remove();
-    })
-}
-
-
-
-
-

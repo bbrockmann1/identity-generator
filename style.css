@@ -1,45 +1,66 @@
-.headerStyle{
+body{
+    background-color: #1F2B41;
+}
+.background{
+    margin: 0;
+    padding: 0;
     text-align: center;
-    background: black;
+    background-position: center 32px;
+    background-color: #1F2B41;
+    font-family: 'Roboto', sans-serif;
+}
+
+.headerStyle{
     font-size: 20px;
     font-weight: 600;
-    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    background-image: linear-gradient(to left, #E5D7C3, #F4EEDA);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-};
-
-.buttonContainer{
-    background-color: #553c9a;
-    width: 100%;
-
 }
 
 .buttons{
-    cursor: pointer;
-    justify-content: center;
+    border: solid;
+    color: black;
+    padding: 15px 32px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     font-family: 'Roboto', sans-serif;
+}
+
+.form{
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 
 }
+
 .userCards{
     grid-gap: 1rem;
     white-space: pre-wrap;
     text-align: center;
     border-style: solid;
-    flex-wrap: wrap;
-    background: #515DA2;
+    background: #BCAE83;
     opacity: .8;
     font-family: 'Roboto', sans-serif;
-  }
+}
 
 #listContainer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     grid-gap: 1rem;
-};
+}
 
-.backgroundCss{
-    background: rgb(199, 29, 29);
+.images{
+    position: relative;
+    left: 20px;
+    border-left: solid;
+    border-bottom: solid;
+    border-right: solid;
 }
