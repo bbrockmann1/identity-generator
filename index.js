@@ -28,7 +28,11 @@ document.querySelector('#clearUsers').onclick = () => {
     })
 }
 
-document.querySelector('#submitSeed').addEventListener('submit', e => fetchSeedUser(e));
+document.querySelector('#submitSeed').addEventListener('submit', e => {
+    const seedInput = document.getElementById('submitSeed');
+    fetchSeedUser(e)
+    seedInput.reset();
+});
 
 function fetchSeedUser(event){
     if (event.target.seedInput.value){
