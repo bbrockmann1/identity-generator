@@ -119,7 +119,7 @@ function newFunction(card){
                 let saveButton = document.createElement('input');
                 saveButton.value = 'Save Changes';
                 saveButton.type = 'submit';
-                saveButton.className = 'buttons'; 
+                //saveButton.className = 'buttons'; 
             
                 changesMade.append(edits, saveButton);
                 e.target.parentNode.append(changesMade);

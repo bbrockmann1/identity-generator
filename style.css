@@ -1,14 +1,6 @@
 body{
     background-color: #1F2B41;
 }
-.background{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-position: center 32px;
-    background-color: #1F2B41;
-    font-family: 'Roboto', sans-serif;
-}
 
 .headerStyle{
     font-size: 20px;
@@ -17,6 +9,15 @@ body{
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+}
+
+.background{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-position: center 32px;
+    background-color: #1F2B41;
+    font-family: 'Roboto', sans-serif;
 }
 
 .buttons{
